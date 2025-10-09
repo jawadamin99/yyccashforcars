@@ -96,13 +96,13 @@ const Header = () => {
                 <li key={item.name} className="relative group">
                   <Link
                     href={item.href}
-                    className={`flex items-center gap-1 text-base font-medium uppercase transition-colors hover:text-primary-red ${
+                    className={`flex items-center gap-1 text-base font-bold uppercase transition-colors hover:text-primary-red ${
                       item.active ? "text-primary-red" : "text-dark-text"
                     }`}
                   >
                     {item.name}
                     {item.dropdown && (
-                      <ChevronDown className="h-5 w-5 transition-transform duration-300 group-hover:rotate-180" />
+                      <ChevronDown className="h-5 w-5 transition-transform duration-300 group-hover:rotate-180 font-bold" />
                     )}
                   </Link>
 
@@ -119,7 +119,7 @@ const Header = () => {
                         <li key={subItem.name} className="relative sub-item ">
                           <Link
                             href={subItem.href}
-                            className="flex items-center justify-between px-5 py-2 text-sm text-gray-text hover:bg-light-background hover:text-primary-red"
+                            className="flex items-center justify-between px-5 py-2 text-sm text-gray-text font-bold hover:bg-light-background hover:text-primary-red"
                             aria-haspopup={!!subItem.dropdown}
                             aria-expanded={
                               subItem.dropdown ? "false" : undefined

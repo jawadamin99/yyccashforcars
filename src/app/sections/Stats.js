@@ -1,7 +1,6 @@
 // Stats Section
 import React from "react";
-import { Users, DollarSign, Car, Clock, CheckCircle, Star } from "lucide-react";
-
+import { Users, DollarSign, Car, Clock, CheckCircle, Star, StarIcon, Smile } from "lucide-react";
 export default function StatsSection() {
   const stats = [
     {
@@ -11,32 +10,19 @@ export default function StatsSection() {
       icon: Car,
       color: "#4d88a9",
     },
-    {
-      id: 2,
-      number: "$2M+",
-      label: "Paid Out",
-      icon: DollarSign,
-      color: "#bd3747",
-    },
+
     {
       id: 3,
       number: "98%",
       label: "Customer Satisfaction",
-      icon: Star,
-      color: "#4d88a9",
-    },
-    {
-      id: 4,
-      number: "24H",
-      label: "Average Response Time",
-      icon: Clock,
+      icon: Smile,
       color: "#bd3747",
     },
     {
-      id: 5,
-      number: "100%",
-      label: "Eco-Friendly Recycling",
-      icon: CheckCircle,
+      id: 4,
+      number: "6+",
+      label: "Years of Experience",
+      icon: Clock,
       color: "#4d88a9",
     },
     {
@@ -44,6 +30,20 @@ export default function StatsSection() {
       number: "10,000+",
       label: "Happy Customers",
       icon: Users,
+      color: "#bd3747",
+    },
+    {
+      id: 2,
+      number: "2500+",
+      label: "Cars purchased",
+      icon: DollarSign,
+      color: "#4d88a9",
+    },
+     {
+      id: 5,
+      number: "5",
+      label: "Rating",
+      icon: StarIcon,
       color: "#bd3747",
     },
   ];
@@ -58,7 +58,7 @@ export default function StatsSection() {
               Stats
             </span>
           </h3>
-          <p className="text-gray-500 max-w-2xl mx-auto text-lg">
+          <p className="text-black max-w-2xl mx-auto text-lg">
             Our track record speaks for itself - trusted by thousands of Calgary
             residents
           </p>

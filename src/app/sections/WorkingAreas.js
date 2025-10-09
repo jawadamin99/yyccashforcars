@@ -74,13 +74,13 @@ export default function WorkingAreasSection() {
     <section className="p-4 py-16 md:p-10 lg:p-20 bg-white">
       <div className="">
         <div className="text-center mb-16">
-          <h3 className="text-4xl font-bold text-gray-900 mb-4">
+          <h3 className="text-4xl font-bold text-black mb-4">
             Our
             <span className="mx-2 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Service Network
             </span>
           </h3>
-          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+          <p className="text-black max-w-2xl mx-auto text-lg">
             Advanced coverage across Calgary and surrounding regions with
             real-time service tracking
           </p>
@@ -158,10 +158,10 @@ export default function WorkingAreasSection() {
                     <Compass className="w-8 h-8 text-[#4d88a9]" />
                     <Star className="w-6 h-6 text-[#bd3747] ml-2" />
                   </div>
-                  <h5 className="text-xl font-bold text-gray-900 mb-2">
+                  <h5 className="text-xl font-bold text-black mb-2">
                     100+ KM Service Radius
                   </h5>
-                  <p className="text-gray-600 mb-4">
+                  <p className="text-black mb-4">
                     Free towing within our coverage area
                   </p>
                 </div>

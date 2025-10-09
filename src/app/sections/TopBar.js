@@ -5,7 +5,7 @@ import React from "react";
 export default function TopBar() {
   return (
     <div className="w-full py-3 px-4 md:px-8 lg:px-12 2xl:px-20 flex bg-gradient-to-r from-primary to-secondary text-white ">
-      <div className="w-full lg:w-2/3 flex justify-between md:justify-start md:gap-5 items-center">
+      <div className="w-full lg:w-2/3 flex justify-between md:justify-start md:gap-5 items-center font-bold">
         <div className="flex gap-2 items-center">
           <Send size={20} className="text-white" />
           <Link href={"mailto:info@yyccashforcars.com"}>
@@ -18,10 +18,10 @@ export default function TopBar() {
             <p className="text-xs lg:text-sm">587-700-9806</p>
           </Link>
         </div>
-        <div className="flex gap-2 items-center hidden md:flex">
+        <div className="gap-2 items-center hidden md:flex">
           <MapPin size={20} className="text-white" />
           <p className="text-xs lg:text-sm">
-            4141 6a St NE, Calgary, AB T2E 8C8, Canada
+            Calgary and Nearby
           </p>
         </div>
       </div>

@@ -1,19 +1,20 @@
 import React from "react";
 import { DollarSign, Truck, Recycle, Zap, MapPin } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Services() {
   return (
     <section className="p-4 py-16 md:p-10 lg:p-20 bg-white">
       <div className="">
         <div className="text-center mb-16">
-          <h3 className="text-4xl font-bold text-gray-900 mb-4">
+          <h3 className="text-4xl font-bold text-black mb-4">
             Our
             <span className="mx-2 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Services in Calgary
             </span>
           </h3>
-          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+          <p className="text-black max-w-2xl mx-auto text-lg">
             Fast, professional cash-for-cars and scrap removal across Calgary &
             surrounding areas
           </p>
@@ -22,16 +23,12 @@ export default function Services() {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Service 1: Cash for Junk Cars */}
           <div className="group relative bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-            {/* Image Container */}
-            <div className="relative h-64 overflow-hidden">
-              <div className="w-full h-full bg-gradient-to-br from-[#4d88a9]/10 to-[#bd3747]/10 flex items-center justify-center">
-                <div className="w-32 h-32 bg-gradient-to-br from-[#4d88a9]/30 to-[#bd3747]/30 rounded-2xl flex items-center justify-center">
-                  <DollarSign className="w-16 h-16 text-[#4d88a9]" />
-                </div>
-              </div>
-              {/* Overlay Effect */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#4d88a9]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </div>
+            <Image
+              src={"/images/car-junk.png"}
+              width={600}
+              height={600}
+              className="h-80 w-full rounded-t-3xl mx-auto"
+            />
 
             {/* Content */}
             <div className="p-8">
@@ -39,11 +36,11 @@ export default function Services() {
                 <div className="w-10 h-10 bg-gradient-to-br from-[#4d88a9] to-[#4d88a9]/80 rounded-xl flex items-center justify-center">
                   <Zap className="w-5 h-5 text-white" />
                 </div>
-                <h4 className="text-2xl font-bold text-gray-900">
+                <h4 className="text-2xl font-bold text-black">
                   Cash for Junk Cars
                 </h4>
               </div>
-              <p className="text-gray-600 mb-6 leading-relaxed">
+              <p className="text-black mb-6 leading-relaxed">
                 Get top dollar for your unwanted vehicle in Calgary any make or
                 condition. We pay cash on the spot and manage paperwork, title
                 transfer, and fast pickup.
@@ -67,16 +64,12 @@ export default function Services() {
 
           {/* Service 2: Scrap Car Removal */}
           <div className="group relative bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-            {/* Image Container */}
-            <div className="relative h-64 overflow-hidden">
-              <div className="w-full h-full bg-gradient-to-br from-[#bd3747]/10 to-[#4d88a9]/10 flex items-center justify-center">
-                <div className="w-32 h-32 bg-gradient-to-br from-[#bd3747]/30 to-[#4d88a9]/30 rounded-2xl flex items-center justify-center">
-                  <Truck className="w-16 h-16 text-[#bd3747]" />
-                </div>
-              </div>
-              {/* Overlay Effect */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#bd3747]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </div>
+            <Image
+              src={"/images/tow-scrap.png"}
+              width={600}
+              height={600}
+              className="h-80 w-full rounded-t-3xl mx-auto"
+            />
 
             {/* Content */}
             <div className="p-8">
@@ -84,11 +77,11 @@ export default function Services() {
                 <div className="w-10 h-10 bg-gradient-to-br from-[#bd3747] to-[#bd3747]/80 rounded-xl flex items-center justify-center">
                   <Truck className="w-5 h-5 text-white" />
                 </div>
-                <h4 className="text-2xl font-bold text-gray-900">
+                <h4 className="text-2xl font-bold text-black">
                   Scrap Car Removal
                 </h4>
               </div>
-              <p className="text-gray-600 mb-6 leading-relaxed">
+              <p className="text-black mb-6 leading-relaxed">
                 Free towing and complete removal of scrap vehicles anywhere in
                 Calgary. We handle pickup, responsible recycling, and all
                 disposal paperwork.

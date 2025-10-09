@@ -100,13 +100,13 @@ export default function TestimonialSection() {
     <section className="p-4 py-16 md:p-10 lg:p-20 bg-white">
       <div className="">
         <div className="text-center mb-16">
-          <h3 className="text-4xl font-bold text-gray-900 mb-4">
+          <h3 className="text-4xl font-bold text-black mb-4">
             Our
             <span className="mx-2 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Happy Customers
             </span>
           </h3>
-          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+          <p className="text-black max-w-2xl mx-auto text-lg">
             Don't just take our word for it - hear from our satisfied customers
             across Canada
           </p>
@@ -172,7 +172,7 @@ export default function TestimonialSection() {
 
                 {/* Quote */}
                 <div className="mb-6">
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-black leading-relaxed">
                     {testimonial.content}
                   </p>
                 </div>
@@ -185,10 +185,10 @@ export default function TestimonialSection() {
                     className="w-12 h-12 rounded-full"
                   />
                   <div>
-                    <h4 className="font-semibold text-gray-900">
+                    <h4 className="font-semibold text-black">
                       {testimonial.name}
                     </h4>
-                    <p className="text-gray-500 text-sm">
+                    <p className="text-black text-sm">
                       {testimonial.location}
                     </p>
                   </div>

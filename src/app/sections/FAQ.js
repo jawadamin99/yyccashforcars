@@ -46,13 +46,13 @@ export default function FAQSection() {
     <section className="p-4 py-16 md:p-10 lg:p-20 bg-white">
       <div className="">
         <div className="text-center mb-16">
-          <h3 className="text-4xl font-bold text-gray-900 mb-4">
+          <h3 className="text-4xl font-bold text-black mb-4">
             <span className="mx-2 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Frequently Asked
             </span>
             Questions
           </h3>
-          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+          <p className="text-black max-w-2xl mx-auto text-lg">
             Got questions? We've got answers. Find everything you need to know
             about selling your junk car.
           </p>
@@ -85,7 +85,7 @@ export default function FAQSection() {
 
               {openIndex === index && (
                 <div className="px-6 pb-6 pt-2 bg-gray-50">
-                  <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                  <p className="text-black leading-relaxed">{faq.answer}</p>
                 </div>
               )}
             </div>

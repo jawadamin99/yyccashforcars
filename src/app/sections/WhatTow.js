@@ -52,13 +52,13 @@ export default function WhatWeTowSection() {
     <section className="p-4 py-16 md:p-10 lg:p-20 bg-white">
       <div className="">
         <div className="text-center mb-16">
-          <h3 className="text-4xl font-bold text-gray-900 mb-4">
+          <h3 className="text-4xl font-bold text-black mb-4">
             What
             <span className="mx-2 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               We Tow
             </span>
           </h3>
-          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+          <p className="text-black max-w-2xl mx-auto text-lg">
             We accept all types of vehicles - no matter the condition, make, or
             model
           </p>
@@ -86,12 +86,12 @@ export default function WhatWeTowSection() {
                   </div>
 
                   {/* Vehicle Name */}
-                  <h4 className="text-xl font-bold text-gray-900 text-center mb-2">
+                  <h4 className="text-xl font-bold text-black text-center mb-2">
                     {vehicle.name}
                   </h4>
 
                   {/* Description */}
-                  <p className="text-gray-600 text-center mb-4 text-sm leading-relaxed">
+                  <p className="text-black text-center mb-4 text-sm leading-relaxed">
                     {vehicle.description}
                   </p>
 

@@ -39,14 +39,14 @@ export default function AboutUsSection() {
               </span>
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+            <h2 className="text-4xl md:text-5xl font-bold text-black leading-tight">
               <span className="mr-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                 Top Cash Now
               </span>
               Cash For Cars in Calgary AB
             </h2>
 
-            <p className="text-lg text-gray-600 leading-relaxed">
+            <p className="text-lg text-black leading-relaxed">
               Calgary cash buyer for junk and used cars quick offers by phone.
               We buy all makes and conditions and pay fair, on-the-spot cash
               with free towing. Same-day pickup, licensed title handling,
@@ -54,7 +54,7 @@ export default function AboutUsSection() {
               professional removal.
             </p>
 
-            <p className="text-lg text-gray-600 leading-relaxed">
+            <p className="text-lg text-black leading-relaxed">
               We deliver fast, friendly service with clear offers and upfront
               pricing. We follow eco-friendly recycling and certified disposal
               across Alberta. across Calgary AB.

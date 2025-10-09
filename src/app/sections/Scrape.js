@@ -1,6 +1,15 @@
 import React from "react";
-import { Car, DollarSign, Truck, Recycle, FileText, Clock } from "lucide-react";
+import {
+  Car,
+  DollarSign,
+  Truck,
+  Recycle,
+  FileText,
+  Clock,
+  Caravan,
+} from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const ScrapCarsSection = () => {
   return (
@@ -11,14 +20,15 @@ const ScrapCarsSection = () => {
             {/* Left Content */}
             <div className="space-y-8">
               <div className="space-y-4">
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black leading-tight">
                   Cash For Scrap Cars in{" "}
                   <span className="bg-gradient-to-r from-[#4d88a9] to-[#bd3747] bg-clip-text text-transparent">
                     Calgary, AB
                   </span>
                 </h2>
-                <p className="text-xl text-gray-600 leading-relaxed">
-                  Get $300 - $10,000 • Fast same-day pickup, free towing & responsible recycling
+                <p className="text-xl text-black leading-relaxed">
+                  Get $300 - $10,000 • Fast same-day pickup, free towing &
+                  responsible recycling
                 </p>
               </div>
 
@@ -29,10 +39,10 @@ const ScrapCarsSection = () => {
                     <FileText className="w-6 h-6 text-[#4d88a9]" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 text-lg">
+                    <h3 className="font-semibold text-black text-lg">
                       No Title? No Problem!
                     </h3>
-                    <p className="text-gray-600 mt-1">
+                    <p className="text-black mt-1">
                       We purchase vehicles without titles easy, legal handling
                     </p>
                   </div>
@@ -43,11 +53,12 @@ const ScrapCarsSection = () => {
                     <Truck className="w-6 h-6 text-[#bd3747]" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 text-lg">
+                    <h3 className="font-semibold text-black text-lg">
                       Free Towing
                     </h3>
-                    <p className="text-gray-600 mt-1">
-                      Free towing and removal across Calgary & nearby communities
+                    <p className="text-black mt-1">
+                      Free towing and removal across Calgary & nearby
+                      communities
                     </p>
                   </div>
                 </div>
@@ -55,13 +66,13 @@ const ScrapCarsSection = () => {
 
               {/* CTA Button */}
               <div className="pt-4">
-                <Link href={'/contact'} >
-                <button className="bg-gradient-to-r from-primary to-secondary text-white px-4 md:px-8 py-3 md:py-4 rounded-full font-bold text-base md:text-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 group">
-                  <span className="flex items-center space-x-2">
-                    <DollarSign className="w-5 h-5" />
-                    <span>Get Your Cash Offer Today!</span>
-                  </span>
-                </button>
+                <Link href={"/contact"}>
+                  <button className="bg-gradient-to-r from-primary to-secondary text-white px-4 md:px-8 py-3 md:py-4 rounded-full font-bold text-base md:text-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 group">
+                    <span className="flex items-center space-x-2">
+                      <DollarSign className="w-5 h-5" />
+                      <span>Get Your Cash Offer Today!</span>
+                    </span>
+                  </button>
                 </Link>
               </div>
             </div>
@@ -74,9 +85,12 @@ const ScrapCarsSection = () => {
                   <div className="relative bg-gradient-to-br from-gray-100 to-gray-200 rounded-3xl p-8 shadow-2xl">
                     {/* Car Silhouette */}
                     <div className="relative">
-                      <div className="w-full h-48 bg-gradient-to-r from-[#4d88a9]/30 to-[#bd3747]/30 rounded-2xl flex items-center justify-center">
-                        <Car className="w-24 h-24 text-gray-400 opacity-50" />
-                      </div>
+                      <Image
+                        src={"/images/scrap.png"}
+                        className="w-full h-66 rounded-2xl"
+                        width={400}
+                        height={400}
+                      />
 
                       {/* Animated Elements */}
                       <div className="absolute -top-4 -right-4 w-16 h-16 bg-[#4d88a9]/20 rounded-full animate-pulse"></div>
@@ -118,15 +132,15 @@ const ScrapCarsSection = () => {
       <section className="p-4 py-16 md:p-10 lg:p-20">
         <div className=" px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h3 className="text-4xl font-bold text-gray-900 mb-4">
+            <h3 className="text-4xl font-bold text-black mb-4">
               Why
               <span className="mx-2 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                 Choose Us
               </span>
-             
             </h3>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Fast, reliable, and hassle-free car buying and scrap removal in Calgary
+            <p className="text-black max-w-2xl mx-auto">
+              Fast, reliable, and hassle-free car buying and scrap removal in
+              Calgary
             </p>
           </div>
 
@@ -135,23 +149,23 @@ const ScrapCarsSection = () => {
               <div className="w-14 h-14 bg-gradient-to-br from-[#4d88a9] to-[#4d88a9]/80 rounded-xl flex items-center justify-center mb-4">
                 <Clock className="w-7 h-7 text-white" />
               </div>
-              <h4 className="text-xl font-semibold text-gray-900 mb-2">
+              <h4 className="text-xl font-semibold text-black mb-2">
                 Locally Owned & Operated
               </h4>
-              <p className="text-gray-600">
+              <p className="text-black">
                 Same-day cash offers, transparent pricing and free towing
               </p>
             </div>
 
             <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="w-14 h-14 bg-gradient-to-br from-[#bd3747] to-[#bd3747]/80 rounded-xl flex items-center justify-center mb-4">
-                <Recycle className="w-7 h-7 text-white" />
+                <Caravan className="w-7 h-7 text-white" />
               </div>
-              <h4 className="text-xl font-semibold text-gray-900 mb-2">
-                Eco-Friendly
+              <h4 className="text-xl font-semibold text-black mb-2">
+                Free Towing
               </h4>
-              <p className="text-gray-600">
-                Responsible recycling and certified disposal for every vehicle
+              <p className="text-black">
+                Free towing and fast pickup across Calgary with no hidden fees
               </p>
             </div>
 
@@ -159,10 +173,10 @@ const ScrapCarsSection = () => {
               <div className="w-14 h-14 bg-gradient-to-br from-[#4d88a9] to-[#bd3747] rounded-xl flex items-center justify-center mb-4">
                 <DollarSign className="w-7 h-7 text-white" />
               </div>
-              <h4 className="text-xl font-semibold text-gray-900 mb-2">
+              <h4 className="text-xl font-semibold text-black mb-2">
                 Best Prices
               </h4>
-              <p className="text-gray-600">
+              <p className="text-black">
                 Guaranteed top dollar highest payouts in Calgary for scrap cars
               </p>
             </div>
