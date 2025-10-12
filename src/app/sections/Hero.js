@@ -10,15 +10,15 @@ const HeroSection = () => {
           <div className="space-y-4">
             <div className="space-y-4">
               <div className="inline-block px-4 py-1 bg-primary text-white rounded-full text-sm font-medium ">
-                Cash for Junk Cars CALG.
+                Cash for Junk Cars CALGARY
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight ">
                 Get
                 <span className="mx-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                  Top Cash Now
+                  Top Cash
                 </span>
-                for Your Car
+                for Your Car Now
               </h1>
 
               <p className="text-lg text-white leading-relaxed">
