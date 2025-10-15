@@ -6,7 +6,7 @@ export default function StatsSection() {
     {
       id: 1,
       number: "2500+",
-      label: "Cars Sold",
+      label: "Cars Purchased",
       icon: Car,
       color: "#4d88a9",
     },
@@ -20,7 +20,7 @@ export default function StatsSection() {
     },
     {
       id: 4,
-      number: "6+",
+      number: "8+",
       label: "Years of Experience",
       icon: Clock,
       color: "#4d88a9",
