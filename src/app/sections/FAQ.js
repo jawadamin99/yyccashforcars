@@ -6,15 +6,15 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState(null);
 
   const faqs = [
-    {
-      question: "Do you buy cars without titles?",
-      answer:
-        "Yes! We buy cars without titles in Calgary. We understand that sometimes paperwork gets lost or misplaced, and we're here to help you get cash for your vehicle regardless.",
-    },
+    // {
+    //   question: "Do you buy cars without titles?",
+    //   answer:
+    //     "Yes! We buy cars without titles in Calgary. We understand that sometimes paperwork gets lost or misplaced, and we're here to help you get cash for your vehicle regardless.",
+    // },
     {
       question: "How quickly can you pick up my junk car?",
       answer:
-        "We offer same-day service in most cases. Once you accept our quote, we'll schedule a pickup time that works for you, often within 24 hours.",
+        "We offer same-day service in most cases. Once you accept our quote, we'll schedule a pickup time that works for you, often within 1 hour.",
     },
     {
       question: "What types of vehicles do you buy?",
@@ -32,9 +32,9 @@ export default function FAQSection() {
         "We pay cash on the spot at the time of pickup. You'll receive payment immediately after we inspect your vehicle and complete the paperwork.",
     },
     {
-      question: "Do you recycle vehicles responsibly?",
+      question: "What documents do I need to provide during the purchase?",
       answer:
-        "Absolutely! We follow all environmental regulations and ensure that your vehicle is recycled responsibly, with hazardous materials properly disposed of and usable parts salvaged.",
+        "You’ll need to provide proof of ownership, a valid government-issued ID, and your vehicle registration to complete the purchase and verify ownership.",
     },
   ];
 

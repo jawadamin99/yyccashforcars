@@ -5,8 +5,8 @@ export default function StatsSection() {
   const stats = [
     {
       id: 1,
-      number: "5,000+",
-      label: "Cars Sold",
+      number: "2500+",
+      label: "Cars Purchased",
       icon: Car,
       color: "#4d88a9",
     },
@@ -20,32 +20,32 @@ export default function StatsSection() {
     },
     {
       id: 4,
-      number: "6+",
+      number: "8+",
       label: "Years of Experience",
       icon: Clock,
       color: "#4d88a9",
     },
-    {
-      id: 6,
-      number: "10,000+",
-      label: "Happy Customers",
-      icon: Users,
-      color: "#bd3747",
-    },
-    {
-      id: 2,
-      number: "2500+",
-      label: "Cars purchased",
-      icon: DollarSign,
-      color: "#4d88a9",
-    },
-     {
-      id: 5,
-      number: "5",
-      label: "Rating",
-      icon: StarIcon,
-      color: "#bd3747",
-    },
+    // {
+    //   id: 6,
+    //   number: "10,000+",
+    //   label: "Happy Customers",
+    //   icon: Users,
+    //   color: "#bd3747",
+    // },
+    // {
+    //   id: 2,
+    //   number: "2500+",
+    //   label: "Cars purchased",
+    //   icon: DollarSign,
+    //   color: "#4d88a9",
+    // },
+    //  {
+    //   id: 5,
+    //   number: "5",
+    //   label: "Rating",
+    //   icon: StarIcon,
+    //   color: "#bd3747",
+    // },
   ];
 
   return (

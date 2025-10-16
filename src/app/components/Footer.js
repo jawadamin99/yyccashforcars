@@ -107,7 +107,7 @@ const Footer = () => {
                   className="text-primary-red mt-1 flex-shrink-0"
                 />
                 <p className="hover:text-primary-red transition-colors">
-                  4141 6a St NE, Calgary, AB T2E 8C8, Canada
+                  Calgary & Nearby
                 </p>
               </li>
             </ul>

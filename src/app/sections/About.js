@@ -41,9 +41,9 @@ export default function AboutUsSection() {
 
             <h2 className="text-4xl md:text-5xl font-bold text-black leading-tight">
               <span className="mr-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                Top Cash Now
+                Top Cash 
               </span>
-              Cash For Cars in Calgary AB
+               For Your Junk Cars in Calgary AB
             </h2>
 
             <p className="text-lg text-black leading-relaxed">
@@ -62,7 +62,7 @@ export default function AboutUsSection() {
 
             <div className="flex gap-4 items-center">
               <div className="bg-gradient-to-r from-primary to-secondary rounded-xl p-3 px-6 font-bold text-white">
-                <p>Proudly Local & Family-Owned</p>
+                <p>Proudly Locally Owned & Operated</p>
               </div>
               <div className="bg-gradient-to-r from-primary to-secondary rounded-xl p-3 px-6 font-bold text-white">
                 <p>Completely Insured Services</p>

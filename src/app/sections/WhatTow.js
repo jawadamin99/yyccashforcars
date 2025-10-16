@@ -33,9 +33,7 @@ export default function WhatWeTowSection() {
       color: "#4d88a9",
       examples: [
         "Pickup Trucks",
-        "Commercial Trucks",
-        "Heavy-Duty",
-        "Dump Trucks",
+       
       ],
     },
     {
