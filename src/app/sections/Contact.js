@@ -8,9 +8,7 @@ export default function ContactForm({ onSide = false }) {
     phone: "",
     email: "",
     city: "",
-    make: "",
-    model: "",
-    year: "",
+    carDetail: "",
     reason: "",
     images: [],
   });
@@ -71,9 +69,7 @@ export default function ContactForm({ onSide = false }) {
       newErrors.email = "Email is invalid";
     }
     if (!formData.city.trim()) newErrors.city = "City is required";
-    if (!formData.make.trim()) newErrors.make = "Make is required";
-    if (!formData.model.trim()) newErrors.model = "Model is required";
-    if (!formData.year.trim()) newErrors.year = "Year is required";
+    if (!formData.carDetail.trim()) newErrors.carDetail = "Car detail is required";
     if (!formData.reason.trim())
       newErrors.reason = "Reason for selling is required";
     if (formData.images.length === 0)
@@ -100,9 +96,7 @@ export default function ContactForm({ onSide = false }) {
       formDataToSend.append("phone", formData.phone);
       formDataToSend.append("email", formData.email);
       formDataToSend.append("city", formData.city);
-      formDataToSend.append("make", formData.make);
-      formDataToSend.append("model", formData.model);
-      formDataToSend.append("year", formData.year);
+      formDataToSend.append("carDetail", formData.carDetail);
       formDataToSend.append("reason", formData.reason);
 
       formData.images.forEach((file, index) => {
@@ -122,9 +116,7 @@ export default function ContactForm({ onSide = false }) {
           phone: "",
           email: "",
           city: "",
-          make: "",
-          model: "",
-          year: "",
+          carDetail: "",
           reason: "",
           images: [],
         });
@@ -248,76 +240,28 @@ export default function ContactForm({ onSide = false }) {
             )}
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <label
-              htmlFor="make"
-              className={`block text-sm font-medium ${textColor} mb-1 `}
-            >
-              Car Make *
-            </label>
-            <input
-              type="text"
-              id="make"
-              name="make"
-              value={formData.make}
-              onChange={handleInputChange}
-              className={`w-full px-4 py-2 ${textColor}  rounded-lg border ${placeHolderColor} dark:placeholder:text-gray-400  ${
-                errors.make ? "border-red-500" : "border-gray-300"
-              } focus:ring-2 focus:ring-primary focus:border-transparent`}
-              placeholder="Car make"
-            />
-            {errors.make && (
-              <p className="text-red-500 text-sm mt-1">{errors.make}</p>
-            )}
-          </div>
 
-          <div>
-            <label
-              htmlFor="model"
-              className={`block text-sm font-medium ${textColor} mb-1 `}
-            >
-             Car Model *
-            </label>
-            <input
-              type="text"
-              id="model"
-              name="model"
-              value={formData.model}
-              onChange={handleInputChange}
-              className={`w-full px-4 py-2 ${textColor}  rounded-lg border ${placeHolderColor} dark:placeholder:text-gray-400  ${
-                errors.model ? "border-red-500" : "border-gray-300"
-              } focus:ring-2 focus:ring-primary focus:border-transparent`}
-              placeholder="Car model"
-            />
-            {errors.model && (
-              <p className="text-red-500 text-sm mt-1">{errors.model}</p>
-            )}
-          </div>
-        </div>
-
+        {/* Replaced Car Make / Model / Year with Car Detail textarea */}
         <div>
           <label
-            htmlFor="year"
+            htmlFor="carDetail"
             className={`block text-sm font-medium ${textColor} mb-1 `}
           >
-           Car Year *
+            Car Detail *
           </label>
-          <input
-            type="number"
-            id="year"
-            name="year"
-            value={formData.year}
+          <textarea
+            id="carDetail"
+            name="carDetail"
+            value={formData.carDetail}
             onChange={handleInputChange}
-            min="1900"
-            max="2024"
+            rows={2}
             className={`w-full px-4 py-2 ${textColor}  rounded-lg border ${placeHolderColor} dark:placeholder:text-gray-400  ${
-              errors.year ? "border-red-500" : "border-gray-300"
+              errors.carDetail ? "border-red-500" : "border-gray-300"
             } focus:ring-2 focus:ring-primary focus:border-transparent`}
-            placeholder="Car year"
+            placeholder="Enter car make, model and year"
           />
-          {errors.year && (
-            <p className="text-red-500 text-sm mt-1">{errors.year}</p>
+          {errors.carDetail && (
+            <p className="text-red-500 text-sm mt-1">{errors.carDetail}</p>
           )}
         </div>
 
