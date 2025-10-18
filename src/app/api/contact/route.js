@@ -93,7 +93,7 @@ export async function POST(request) {
   <title>New Contact — yycCash for Cars</title>
 </head>
 <body style="margin:0; padding:0; background-color: #f8fafc; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: #1e293b; -webkit-font-smoothing: antialiased;">
-  <div style="padding: 28px; display: flex; justify-content: center; min-height: 100vh; align-items: center;">
+  <div style="padding: 28px; display: flex; justify-content: center; align-items: center;">
     <div style="width: 100%; max-width: 780px;margin:auto; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); border: 1px solid #e2e8f0; background-color: #ffffff;">
       <div style="background: linear-gradient(135deg, #4d88a9, #bd3747); padding: 24px 28px; color: white;">
         <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
