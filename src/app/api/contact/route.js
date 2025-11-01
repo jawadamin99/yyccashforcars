@@ -34,9 +34,6 @@ export async function POST(request) {
       });
     }
   }
-
-  console.log('email',process.env.GMAIL_USER)
-  console.log('pass',process.env.GMAIL_PASS)
   // Nodemailer transporter (Gmail)
   const transporter = nodemailer.createTransport({
     service: "Gmail",
