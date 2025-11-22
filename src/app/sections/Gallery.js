@@ -6,43 +6,79 @@ export default function GallerySection() {
   const galleryItems = [
     {
       id: 1,
-      image: "/images/g1.png",
+      image: "/images/gallery/g1.jpeg",
       width: "w-full md:w-1/3",
       height: "h-48 md:h-64",
     },
     {
       id: 2,
-      image: "/images/g2.png",
+      image: "/images/gallery/g2.jpeg",
       width: "w-full md:w-1/3",
       height: "h-48 md:h-64",
     },
     {
       id: 3,
-      image: "/images/g3.png",
+      image: "/images/gallery/g3.jpeg",
       width: "w-full md:w-1/3",
       height: "h-48 md:h-64",
     },
     {
       id: 4,
-      image: "/images/g4.png",
+      image: "/images/gallery/g4.jpeg",
       width: "w-full md:w-2/3",
       height: "h-48 md:h-64",
     },
     {
       id: 5,
-      image: "/images/g5.png",
+      image: "/images/gallery/g5.jpeg",
       width: "w-full md:w-1/3",
       height: "h-48 md:h-64",
     },
     {
       id: 6,
-      image: "/images/g6.png",
+      image: "/images/gallery/g6.jpeg",
       width: "w-full md:w-1/3",
       height: "h-48 md:h-64",
     },
     {
       id: 7,
-      image: "/images/g7.png",
+      image: "/images/gallery/g7.jpeg",
+      width: "w-full md:w-1/3",
+      height: "h-48 md:h-64",
+    },
+    {
+      id: 8,
+      image: "/images/gallery/g8.jpeg",
+      width: "w-full md:w-1/3",
+      height: "h-48 md:h-64",
+    },
+    {
+      id: 9,
+      image: "/images/gallery/g9.jpeg",
+      width: "w-full md:w-1/3",
+      height: "h-48 md:h-64",
+    },
+    {
+      id: 10,
+      image: "/images/gallery/g10.jpeg",
+      width: "w-full md:w-1/3",
+      height: "h-48 md:h-64",
+    },
+    {
+      id: 11,
+      image: "/images/gallery/g11.jpeg",
+      width: "w-full md:w-1/3",
+      height: "h-48 md:h-64",
+    },
+    {
+      id: 12,
+      image: "/images/gallery/g12.jpeg",
+      width: "w-full md:w-1/3",
+      height: "h-48 md:h-64",
+    },
+    {
+      id: 13,
+      image: "/images/gallery/g13.jpeg",
       width: "w-full md:w-1/3",
       height: "h-48 md:h-64",
     },
@@ -131,6 +167,55 @@ export default function GallerySection() {
               src={galleryItems[6].image}
               alt="Eco-Friendly Recycling"
               className={`w-full ${galleryItems[3].height} object-cover`}
+            />
+          </div>
+          {/* Row 4 - 3 equal images */}
+          <div className="overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+            <Image
+              width={700}
+              height={700}
+              src={galleryItems[7].image}
+              alt="Junk Car Collection"
+              className={`w-full ${galleryItems[7].height} object-cover`}
+            />
+          </div>
+          <div className="overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+            <Image
+              width={700}
+              height={700}
+              src={galleryItems[8].image}
+              alt="Free Towing Service"
+              className={`w-full ${galleryItems[8].height} object-cover`}
+            />
+          </div>
+          <div className="overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+            <Image
+              width={700}
+              height={700}
+              src={galleryItems[9].image}
+              alt="Cash Payment"
+              className={`w-full ${galleryItems[9].height} object-cover`}
+            />
+          </div>
+
+          {/* Row 5 - 2 images */}
+
+          <div className="md:col-span-2 overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+            <Image
+              width={800}
+              height={700}
+              src={galleryItems[12].image}
+              alt="Eco-Friendly Recycling"
+              className={`w-full ${galleryItems[12].height} object-cover`}
+            />
+          </div>
+          <div className="overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+            <Image
+              width={700}
+              height={700}
+              src={galleryItems[10].image}
+              alt="Same Day Service"
+              className={`w-full ${galleryItems[10].height} object-cover`}
             />
           </div>
         </div>
