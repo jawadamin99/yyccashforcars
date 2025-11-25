@@ -3,7 +3,8 @@ import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
-import Head from "next/head";
+import Script from "next/script";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -29,9 +30,7 @@ export const metadata = {
   ],
   applicationName: "Cash for Cars Calgary",
   generator: "Next.js",
-  authors: [
-    { name: "Calgary Cash for Cars", url: "https://www.yourdomain.com" },
-  ],
+  authors: [{ name: "Calgary Cash for Cars", url: "https://www.yourdomain.com" }],
   viewport: "width=device-width, initial-scale=1",
   metadataBase: new URL("https://www.yourdomain.com"),
   alternates: { canonical: "https://www.yourdomain.com" },
@@ -82,63 +81,42 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
-        <title>Cash for Cars Calgary — Top Dollar for Junk & Scrap Cars</title>
-        <meta
-          name="description"
-          content="Get fast, same-day cash for junk, wrecked and used vehicles in Calgary. Free towing, licensed paperwork, and eco-friendly recycling. Serving Calgary, Airdrie, Cochrane & Okotoks. Instant quotes available online or by phone."
-        />
-        <meta
-          name="keywords"
-          content="cash for cars Calgary, cash for junk cars Calgary, scrap car removal Calgary, free towing Calgary, sell my car Calgary, junk car buyers Calgary, same day car pickup Calgary"
-        />
-        <link rel="canonical" href="https://www.yourdomain.com" />
-        <meta name="robots" content="index, follow" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#0f172a" />
+      <head>
+        {/* Google Tag Manager */}
+        <Script id="gtm-script" strategy="afterInteractive">
+          {`
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-KK32N6HP');
+          `}
+        </Script>
+        {/* End Google Tag Manager */}
+      </head>
 
-        {/* Open Graph */}
-        <meta
-          property="og:title"
-          content="Cash for Cars Calgary — Top Dollar for Junk & Scrap Cars"
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-white`}
+      >
+        {/* Google Tag Manager (noscript) */}
+        <noscript
+          dangerouslySetInnerHTML={{
+            __html: `
+              <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK32N6HP"
+              height="0" width="0" style="display:none;visibility:hidden"></iframe>
+            `,
+          }}
         />
-        <meta
-          property="og:description"
-          content="Fast, trusted cash for junk and scrap vehicles in Calgary. Free towing, immediate payment, licensed paperwork and responsible recycling. Serving Calgary, Airdrie, Cochrane & Okotoks."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.yourdomain.com" />
-        <meta
-          property="og:image"
-          content="https://www.yourdomain.com/images/og-image.jpg"
-        />
-        <meta property="og:site_name" content="Cash for Cars Calgary" />
-        <meta property="og:locale" content="en_CA" />
+        {/* End Google Tag Manager (noscript) */}
 
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Cash for Cars Calgary — Top Dollar for Junk & Scrap Cars"
-        />
-        <meta
-          name="twitter:description"
-          content="Get same-day cash for junk cars in Calgary. Free towing, licensed paperwork, and eco-friendly recycling. Instant quotes online or by phone."
-        />
-        <meta
-          name="twitter:image"
-          content="https://www.yourdomain.com/images/og-image.jpg"
-        />
-        <meta name="twitter:creator" content="@YourTwitterHandle" />
-
-        {/* Local SEO hints */}
-        <meta name="geo.region" content="CA-AB" />
-        <meta name="geo.placename" content="Calgary" />
-        <meta name="geo.position" content="51.0447;-114.0719" />
-        <meta name="ICBM" content="51.0447, -114.0719" />
+        <Header />
+        {children}
+        <WhatsAppButton />
+        <Footer />
 
         {/* JSON-LD LocalBusiness structured data */}
-        <script
+        <Script
+          id="localbusiness-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
@@ -159,18 +137,9 @@ export default function RootLayout({ children }) {
                 "https://www.instagram.com/yourprofile",
                 "https://twitter.com/YourTwitterHandle",
               ],
-              // You can add telephone, address, priceRange when available
             }),
           }}
         />
-      </Head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-white`}
-      >
-        <Header />
-        {children}
-        <WhatsAppButton />
-        <Footer />
       </body>
     </html>
   );
