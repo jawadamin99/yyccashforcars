@@ -119,16 +119,25 @@ const Footer = () => {
 
   <div className="flex space-x-3 pt-2 items-center">
     {socialLinks.map((link, index) => (
-      <div
+      <a
         key={index}
+        href={link.href}
+        target="_blank"
+        rel="noopener noreferrer"
         className="w-9 h-9 flex items-center justify-center rounded-full border-2 border-white text-white hover:bg-primary-red hover:border-primary-red transition-all duration-300 cursor-default"
       >
         {link.icon}
-      </div>
+      </a>
     ))}
 
     {/* TikTok icon (no link) */}
-    <div className="w-10 h-10 flex items-center justify-center border-2 border-white rounded-full">
+    <a
+      href="https://www.tiktok.com/@yyccashforcars"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-10 h-10 flex items-center justify-center border-2 border-white rounded-full hover:bg-primary-red hover:border-primary-red transition-all duration-300 cursor-pointer"
+      aria-label="TikTok"
+    >
       <Image
         src="/images/icons/tiktok.png"
         width={40}
@@ -136,7 +145,7 @@ const Footer = () => {
         alt="TikTok"
         className="p-2"
       />
-    </div>
+    </a>
   </div>
 </div>
 
