@@ -76,6 +76,9 @@ export const metadata = {
     shortcut: "/favicon.ico",
     apple: "/apple-touch-icon.png",
   },
+  verification: {
+    google: "oTaujBvKmBTSOguDXqORWFivrsXYYDAI_c1pswy2c2E",
+  },
 };
 
 export default function RootLayout({ children }) {
