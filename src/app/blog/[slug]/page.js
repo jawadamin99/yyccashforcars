@@ -71,6 +71,113 @@ export default function BlogPostPage({ params }) {
   /*const recentPosts = allPosts.filter((item) => item.slug !== slug).slice(0, 5);*/ 
   const recentPosts = allPosts.slice(0, 5);
   const canonicalUrl = post ? `https://www.yyccash.com/blog/${post.slug}` : "";
+  const faqMap = {
+    "how-to-sell-used-car-canada-calgary": [
+      {
+        question: "Is it legal to sell a used car privately in Canada?",
+        answer:
+          "Yes. Private vehicle sales are legal in Canada. You need a bill of sale and to transfer the vehicle registration. Requirements vary by province, and Alberta does not require a safety inspection from the seller.",
+      },
+      {
+        question: "How long does it take to sell a used car in Alberta?",
+        answer:
+          "Private sales average 3-6 weeks in Calgary. Cash buyers can complete a sale in 1-2 days. Dealership trade-ins happen the same day when buying another vehicle.",
+      },
+      {
+        question: "Do I pay taxes when selling my car privately in Canada?",
+        answer:
+          "No. Private vehicle sales between individuals are GST/HST exempt. In Alberta, buyers also do not pay sales tax when registering a privately purchased vehicle.",
+      },
+      {
+        question: "Can cash for cars companies buy non-running vehicles?",
+        answer:
+          "Yes. Cash for cars companies buy vehicles that do not run, including cars with blown engines, transmission failure, or major accident damage. They usually provide free towing.",
+      },
+      {
+        question: "How do I transfer car ownership in Alberta?",
+        answer:
+          "Sign the transfer section on the vehicle registration, give it to the buyer along with a bill of sale, and remove your plates. The buyer then registers the vehicle at a registry agent.",
+      },
+      {
+        question: "Is it better to sell my car privately or to a dealer?",
+        answer:
+          "Private sales can bring the highest price but take time. Dealership trade-ins are convenient but usually pay 20-30% less. Cash buyers are ideal for speed or damaged vehicles.",
+      },
+    ],
+    "where-to-sell-used-car-calgary": [
+      {
+        question: "Where is the best place to sell a used car in Calgary?",
+        answer:
+          "Private sales pay the most but take weeks. Cash for cars services offer the best speed-to-value balance, especially for older or damaged vehicles. Scrap yards pay the least but accept anything.",
+      },
+      {
+        question: "Who buys junk cars in Calgary?",
+        answer:
+          "Cash for cars companies and scrap yards both buy junk vehicles. Cash buyers typically pay more because they resell usable parts or export vehicles.",
+      },
+      {
+        question: "Can I sell a car without a safety inspection in Alberta?",
+        answer:
+          "Yes. Alberta does not require sellers to provide a safety inspection certificate. Vehicles can be sold as-is.",
+      },
+      {
+        question: "How fast can I sell my car in Calgary?",
+        answer:
+          "Cash buyers typically complete sales in 24-48 hours. Private sales take about 3-6 weeks. Dealership trade-ins happen the same day when buying another vehicle.",
+      },
+      {
+        question: "Do I need to clean my car before selling?",
+        answer:
+          "For private sales, presentation matters. For cash buyers, no. They purchase vehicles in any condition, including dirty or damaged.",
+      },
+      {
+        question: "What if I still owe money on my car?",
+        answer:
+          "You must pay off the loan before selling. Contact your lender for the payoff amount. Some buyers can pay the lender directly and give you the difference.",
+      },
+    ],
+    "used-car-valuation-alberta": [
+      {
+        question: "How much does mileage really affect used car valuation in Alberta?",
+        answer:
+          "Mileage matters, but total condition matters more. A higher-mileage vehicle with strong maintenance records can be worth more than a lower-mileage car with deferred maintenance.",
+      },
+      {
+        question: "Can I sell my car with mechanical problems in Alberta?",
+        answer:
+          "Yes. Mechanical issues do not eliminate value. Cash for cars services buy vehicles in any condition because they evaluate parts and salvage value.",
+      },
+      {
+        question: "How does hail damage affect my car value in Calgary?",
+        answer:
+          "Hail damage can reduce private sale value by 25-40% depending on severity. Cash buyers factor repair costs into offers without extreme discounts.",
+      },
+      {
+        question: "Should I fix my car before selling it in Alberta?",
+        answer:
+          "Usually no. Repairs rarely return full value in the sale price. Minor cosmetic fixes can help, but major mechanical repairs often do not pay back.",
+      },
+      {
+        question: "Is selling to YYC Cash for Cars safe and legitimate?",
+        answer:
+          "Yes. YYC Cash for Cars operates as a licensed Alberta business and provides quotes, towing, legal documentation, and immediate payment.",
+      },
+    ],
+  };
+  const faqSchema = post
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: (faqMap[post.slug] || []).map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: item.answer,
+          },
+        })),
+      }
+    : null;
   const jsonLd = post
     ? {
         "@context": "https://schema.org",
@@ -109,6 +216,12 @@ export default function BlogPostPage({ params }) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      )}
+      {faqSchema && faqSchema.mainEntity.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
       )}
       <Breadcrumb name={post.title} />
