@@ -46,6 +46,7 @@ const navItems = [
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
+  const [desktopDropdown, setDesktopDropdown] = useState(null);
 
   // mobile accordion state: store expanded top-level items and expanded nested items
   const [expanded, setExpanded] = useState(new Set()); // holds top-level item names
@@ -107,7 +108,12 @@ const Header = () => {
           <nav className="hidden lg:flex items-center dark:text-black">
             <ul className="flex items-center gap-10">
               {navItems.map((item) => (
-                <li key={item.name} className="relative group">
+                <li
+                  key={item.name}
+                  className="relative group"
+                  onMouseEnter={() => setDesktopDropdown(item.name)}
+                  onMouseLeave={() => setDesktopDropdown(null)}
+                >
                   <Link
                     href={item.href}
                     className={`flex items-center gap-1 text-base font-bold uppercase transition-colors hover:text-primary-red ${
@@ -123,10 +129,12 @@ const Header = () => {
                   {item.dropdown && (
                     /* FIRST-LEVEL DROPDOWN */
                     <ul
-                      className="absolute left-0 top-full mt-4 w-52 bg-white shadow-lg rounded-md py-3
-                       opacity-0 invisible group-hover:opacity-100 group-hover:visible
-                       transition-all duration-300 transform group-hover:translate-y-0 translate-y-2
-                       first-level-dropdown"
+                      className={`absolute left-0 top-full mt-4 w-52 bg-white shadow-lg rounded-md py-3
+                       transition-all duration-300 transform first-level-dropdown ${
+                         desktopDropdown === item.name
+                           ? "opacity-100 visible translate-y-0"
+                           : "opacity-0 invisible translate-y-2"
+                       }`}
                     >
                       {item.dropdown.map((subItem) => (
                         /* sub-item is NOT a Tailwind `group` for controlling its submenu */
