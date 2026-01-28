@@ -225,6 +225,28 @@ export default function RootLayout({ children }) {
             }),
           }}
         />
+
+        <Script id="conversion-click-call" strategy="afterInteractive">
+          {`
+            (function(){
+              document.addEventListener('click', function(e){
+                if(e.target.closest('a[href^="tel:"]')){
+                  gtag('event', 'conversion', {'send_to': 'AW-17598549406/eYWUCLCnyO4bEJ6b0sdB'});
+                }
+              });
+            })();
+          `}
+        </Script>
+
+        <Script id="conversion-thank-you" strategy="afterInteractive">
+          {`
+            window.addEventListener('load', function() {
+              if (window.location.href.includes('/thank-you')) {
+                gtag('event', 'conversion', {'send_to': 'AW-17598549406/Cle9CNH0yO4bEJ6b0sdB'});
+              }
+            });
+          `}
+        </Script>
       </body>
     </html>
   );
