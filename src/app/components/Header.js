@@ -100,6 +100,8 @@ const Header = () => {
           <Link href="/" className="flex-shrink-0">
             <Image alt="YYC Cash for Cars"
               src={"/images/yyc-car-logo.png"}
+              width={310}
+              height={96}
               className="h-24 w-auto"
             />
           </Link>
@@ -273,10 +275,10 @@ const Header = () => {
             <div className="flex items-center gap-3">
               <Image
                 src={"/images/yyc-car-logo.png"}
-                width={160}
-                height={64}
+                width={310}
+                height={90}
                 alt="logo"
-                className="w-40 h-16 object-contain"
+                className="h-24 w-auto object-contain"
               />
             </div>
             <button onClick={closeMenu} aria-label="Close menu" className="p-2">
