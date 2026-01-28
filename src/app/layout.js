@@ -126,6 +126,23 @@ export default function RootLayout({ children }) {
       gtag('config', 'G-2LCP9SHQQR');
     `}
         </Script>
+
+        {/* TrafficGuard Integration */}
+        <Script id="trafficguard-script" strategy="afterInteractive">
+          {`
+            var dataTrafficGuard = window.dataTrafficGuard || [];
+            dataTrafficGuard.push(['property', 'tg-022627-001']);
+            dataTrafficGuard.push(['event','pageview']);
+            (function() {
+              var tg = document.createElement('script');
+              tg.type = 'text/javascript';
+              tg.async = true;
+              tg.src = '//tgtag.io/tg.js?pid=tg-022627-001';
+              var s = document.getElementsByTagName('script')[0];
+              s.parentNode.insertBefore(tg, s);
+            })();
+          `}
+        </Script>
       </head>
 
       <body
@@ -138,6 +155,13 @@ export default function RootLayout({ children }) {
               <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK32N6HP"
               height="0" width="0" style="display:none;visibility:hidden"></iframe>
             `,
+          }}
+        />
+
+        <noscript
+          dangerouslySetInnerHTML={{
+            __html:
+              '<img src="//p.tgtag.io/event?property_id=tg-022627-001&event_name=pageview&no_script=1" width="1" height="1" border="0" />',
           }}
         />
         
