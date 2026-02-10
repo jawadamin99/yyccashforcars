@@ -198,15 +198,15 @@ const Header = () => {
 
           <div className="flex items-center gap-2">
             <div className="hidden lg:flex items-center relative">
-              <button
+              {/* <button
                 type="button"
                 aria-label="Open search"
                 onClick={() => setIsSearchOpen((prev) => !prev)}
                 className="p-2 rounded-full hover:bg-gray-100 transition-colors"
               >
                 <Search className="h-5 w-5 text-black" />
-              </button>
-              {isSearchOpen && (
+              </button> */}
+              {/*isSearchOpen && (
                 <form
                   action="/search"
                   method="GET"
@@ -226,11 +226,11 @@ const Header = () => {
                     Go
                   </button>
                 </form>
-              )}
+              )*/}
             </div>
             <Link href="/contact" className="hidden lg:block">
               <div className="rounded-xl bg-gradient-to-r from-primary to-secondary text-white font-semibold text-sm py-[14px] px-8 transition-all duration-300 hover:bg-dark-text">
-               Get an Instant Quote Now
+               Get a Quote Now
               </div>
             </Link>
             <button
