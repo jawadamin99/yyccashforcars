@@ -1,9 +1,20 @@
 import Link from "next/link";
+import Image from "next/image";
 import ContactForm from "./Contact";
 import "./styles/Hero.css";
 const HeroSection = () => {
   return (
-    <div className="min-h-screen p-4 py-16 md:p-10 lg:p-20 heroBg">
+    <div className="min-h-screen p-4 py-16 md:p-10 lg:p-20 heroBg relative overflow-hidden">
+      <Image
+        src="/images/hero.jpg"
+        alt="Cash for cars Calgary"
+        fill
+        priority
+        fetchPriority="high"
+        sizes="100vw"
+        className="heroBgImage"
+      />
+      <div className="heroBgOverlay" aria-hidden="true" />
       <div className="">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
@@ -15,7 +26,7 @@ const HeroSection = () => {
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight ">
                 Get
-                <span className="mx-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                <span className="mx-4">
                   Top Cash
                 </span>
                 for Your Car Now

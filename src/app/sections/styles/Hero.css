@@ -1,7 +1,17 @@
-.heroBg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)),
-      url('/images/hero.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
+.heroBgImage {
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+
+.heroBgOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3));
+  z-index: 1;
+}
+
+.heroBg > * {
+  position: relative;
+  z-index: 2;
+}
