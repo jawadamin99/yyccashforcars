@@ -4,6 +4,7 @@ import FAQSection from '../sections/FAQ'
 import { getOgImageForPath } from "@/lib/seo";
 
 export const metadata = {
+  alternates: { canonical: "/faqs" },
   openGraph: {
     images: [getOgImageForPath("faqs")],
   },

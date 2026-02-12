@@ -3,6 +3,19 @@ import { getAllPosts } from "@/lib/blog";
 import { getOgImageForPath } from "@/lib/seo";
 
 const PAGE_SIZE = 4;
+export const dynamic = "force-static";
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  const totalPages = Math.max(Math.ceil(getAllPosts().length / PAGE_SIZE), 1);
+  const pages = [];
+
+  for (let page = 2; page <= totalPages; page++) {
+    pages.push({ page: page.toString() });
+  }
+
+  return pages;
+}
 
 export async function generateMetadata({ params }) {
   const pageNumber = parseInt(params.page, 10);

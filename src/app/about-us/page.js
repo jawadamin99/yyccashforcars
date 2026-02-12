@@ -8,6 +8,7 @@ import TestimonialSection from "../sections/Testimonial";
 import { getOgImageForPath } from "@/lib/seo";
 
 export const metadata = {
+  alternates: { canonical: "/about-us" },
   openGraph: {
     images: [getOgImageForPath("about-us")],
   },

@@ -4,6 +4,7 @@ import ContactForm from "../sections/Contact";
 import { getOgImageForPath } from "@/lib/seo";
 
 export const metadata = {
+  alternates: { canonical: "/contact" },
   openGraph: {
     images: [getOgImageForPath("contact")],
   },

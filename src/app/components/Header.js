@@ -269,7 +269,7 @@ const Header = () => {
           className={`fixed top-0 right-0 z-50 h-full w-full sm:w-[480px] bg-white shadow-xl transform transition-transform duration-300 ease-in-out
             ${isMenuOpen ? "translate-x-0" : "translate-x-full"}`}
           aria-hidden={!isMenuOpen}
-          inert={isMenuOpen ? undefined : ""}
+          inert={!isMenuOpen}
         >
           {/* header inside panel */}
           <div className="flex items-center justify-between px-4 py-4 border-b">

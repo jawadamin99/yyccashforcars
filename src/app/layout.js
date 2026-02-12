@@ -33,7 +33,6 @@ export const metadata = {
   authors: [{ name: "Calgary Cash for Cars", url: "https://www.yyccash.com" }],
   viewport: "width=device-width, initial-scale=1",
   metadataBase: new URL("https://www.yyccash.com/"),
-  alternates: { canonical: "https://www.yyccash.com/" },
   robots: {
     index: true,
     follow: true,
@@ -76,59 +75,38 @@ export const metadata = {
     shortcut: "/favicon.ico",
     apple: "/apple-touch-icon.png",
   },
-  verification: {
-    google: "oTaujBvKmBTSOguDXqORWFivrsXYYDAI_c1pswy2c2E",
-  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        {/* Google tag (gtag.js) */}
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-white`}
+      >
         <Script
-          async
+          id="gtag-loader"
+          strategy="beforeInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=AW-17598549406"
         />
-        
-        <Script id="google-ads-gtag" strategy="afterInteractive">
+        <Script id="gtag-init" strategy="beforeInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'AW-17598549406');
+            gtag('config', 'G-2LCP9SHQQR');
           `}
         </Script>
-
-        {/* Google Tag Manager */}
-        <Script id="gtm-script" strategy="afterInteractive">
+        <Script id="gtm-loader" strategy="beforeInteractive">
           {`
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-KK32N6HP');
-    `}
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-KK32N6HP');
+          `}
         </Script>
-        {/* End Google Tag Manager */}
-
-        {/* Google Analytics (gtag.js) */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-2LCP9SHQQR"
-          strategy="afterInteractive"
-        />
-
-        <Script id="ga4-script" strategy="afterInteractive">
-          {`
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-2LCP9SHQQR');
-    `}
-        </Script>
-
-        {/* TrafficGuard Integration */}
-        <Script id="trafficguard-script" strategy="afterInteractive">
+        <Script id="trafficguard" strategy="beforeInteractive">
           {`
             var dataTrafficGuard = window.dataTrafficGuard || [];
             dataTrafficGuard.push(['property', 'tg-022627-001']);
@@ -143,11 +121,6 @@ export default function RootLayout({ children }) {
             })();
           `}
         </Script>
-      </head>
-
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-white`}
-      >
         {/* Google Tag Manager (noscript) */}
         <noscript
           dangerouslySetInnerHTML={{

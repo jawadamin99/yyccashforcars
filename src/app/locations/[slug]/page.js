@@ -8,6 +8,9 @@ import Stats from "@/app/sections/Stats";
 import Testimonial from "@/app/sections/Testimonial";
 import { getOgImageForPath } from "@/lib/seo";
 
+export const dynamic = "force-static";
+export const dynamicParams = false;
+
 // Location data with detailed information
 const locationsData = [
   {
@@ -300,6 +303,9 @@ export async function generateMetadata({ params }) {
   return {
     title: `${location.heading} | YYC Cash for Cars`,
     description: location.description.substring(0, 160),
+    alternates: {
+      canonical: `/locations/${location.slug}`,
+    },
     openGraph: {
       title: `${location.heading} | YYC Cash for Cars`,
       description: location.description.substring(0, 160),

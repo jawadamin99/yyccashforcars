@@ -39,6 +39,13 @@ const services = [
   },
 ];
 
+export const dynamic = "force-static";
+export const dynamicParams = false;
+
+export async function generateStaticParams() {
+  return services.map((service) => ({ servicename: service.slug }));
+}
+
 export async function generateMetadata({ params }) {
   const { servicename } = await params;
   const decodedServiceName = decodeURIComponent(servicename);
@@ -57,6 +64,9 @@ export async function generateMetadata({ params }) {
   return {
     title: `${service.name} | YYC Cash for Cars`,
     description,
+    alternates: {
+      canonical: `/services/${service.slug}`,
+    },
     openGraph: {
       title: `${service.name} | YYC Cash for Cars`,
       description,
@@ -104,9 +114,9 @@ export default async function ServicePage({ params }) {
 
           {/* Content Section */}
           <div className="flex-1 p-6 lg:p-10 lg:py-32">
-            <h2 className="text-4xl font-bold mb-4 dark:text-black">
+            <h1 className="text-4xl font-bold mb-4 dark:text-black">
               {service.name}
-            </h2>
+            </h1>
             <p className="text-gray-600 text-sm mb-6">{service.desc}</p>
 
             {/* Key Features List */}

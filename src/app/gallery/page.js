@@ -4,6 +4,7 @@ import GallerySection from '../sections/Gallery'
 import { getOgImageForPath } from "@/lib/seo";
 
 export const metadata = {
+  alternates: { canonical: "/gallery" },
   openGraph: {
     images: [getOgImageForPath("gallery")],
   },
