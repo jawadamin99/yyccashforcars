@@ -7,6 +7,5 @@ export default function robots() {
       },
     ],
     sitemap: "https://www.yyccash.com/sitemap.xml",
-    host: "https://www.yyccash.com",
   };
 }
